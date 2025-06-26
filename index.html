@@ -1,101 +1,85 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #333;
-  transition: background 0.3s, color 0.3s;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mithun Khan - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mithun Khan</h1>
+    <p>Web Developer | Learner | Tech Enthusiast</p>
+    <button id="toggle-theme">Toggle Light/Dark</button>
+  </header>
 
-header {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="cv.pdf" download>Download CV</a>
+  </nav>
 
-nav {
-  background: #444;
-  padding: 0.5rem;
-  text-align: center;
-}
+  <main>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Hello! I'm Mithun Khan, a passionate web developer from Bangladesh. I love building simple and powerful websites.</p>
+    </section>
 
-nav a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-}
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul>
+        <li>B.Sc in Computer Science - University of Global Village (UGV)</li>
+      </ul>
+    </section>
 
-main {
-  padding: 2rem;
-}
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="skill">
+        <label>HTML</label>
+        <div class="bar"><div class="fill html"></div></div>
+      </div>
+      <div class="skill">
+        <label>CSS</label>
+        <div class="bar"><div class="fill css"></div></div>
+      </div>
+      <div class="skill">
+        <label>JavaScript</label>
+        <div class="bar"><div class="fill js"></div></div>
+      </div>
+    </section>
 
-.card {
-  background: #fff;
-  margin: 1rem auto;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  max-width: 700px;
-}
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li>Personal Portfolio Website</li>
+        <li>Weather App with OpenWeather API</li>
+      </ul>
+    </section>
 
-.skill {
-  margin-bottom: 10px;
-}
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
-.bar {
-  background: #ddd;
-  border-radius: 20px;
-  height: 20px;
-  width: 100%;
-  overflow: hidden;
-}
+  <footer>
+    <p>© 2025 Mithun Khan</p>
+  </footer>
 
-.fill {
-  height: 100%;
-  border-radius: 20px;
-}
-
-.html { width: 90%; background: #f16529; }
-.css { width: 85%; background: #2965f1; }
-.js { width: 70%; background: #f0db4f; }
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input, form textarea {
-  margin-bottom: 10px;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-}
-
-form button {
-  padding: 0.8rem;
-  background: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-body.dark-mode {
-  background: #1a1a1a;
-  color: #eee;
-}
-
-body.dark-mode header,
-body.dark-mode nav {
-  background: #000;
-}
-
-body.dark-mode .card {
-  background: #222;
-}
-
-body.dark-mode a {
-  color: #ccc;
-}
+  <script>
+    // Light/Dark Mode Toggle
+    const toggleBtn = document.getElementById("toggle-theme");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
